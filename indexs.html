@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <style>
+        *{margin: 0; padding: 0; border: none;}
+        ol,ul,li{list-style: none;}
+        img{vertical-align: top;}
+        a{text-decoration: none; color: black;}
+
+
+        .wrap{box-sizing: border-box; width: 100%; max-width: 1920px; margin: 0 auto; overflow: hidden;}
+        
+        .header{height: 123px}
+        .container{display: block;width: 1150px; margin: 0 auto; height: 100px;}
+        .container>.header_sns{float: right;}
+        .container>.header_sns>a>img{width: 34px; height: 34px; margin-top: 22px;}
+        .container>.header_sns>p{display: inline-block; font-size: 14px; font-weight: bold;  margin-top: 30px;}
+        .container>.header_sns>p>a{color:#888888;}
+        .container>.header_logo{padding-top:25px;}
+        .container>.header_logo>a>img{width: 70px; height: 70px;}
+        .container>.header_logo>p{display: inline-block; font-weight: bold; font-size: 41px; color: #0e347e; display: inline-block; 
+            margin: 10px 0 0 10px;}
+        .container>ul{float: right;}
+        .container>ul>li{display: inline-block; margin-left: 76px; font-size: 18px; font-weight: bold; color: #888888;}
+        .container>ul>li:nth-child(1){margin-left: 0;}
+
+        .section_main_banner{height: 600px;}
+        .section_main_banner{height: 600px;}
+        .bx-wrapper{box-shadow: none; border: none; }
+        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{bottom: 20px;}
+        .bx-wrapper .bx-prev{background: none; right: -1px;}
+        .bx-wrapper .bx-next{background: none; right: -1px;}
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, 
+        .bx-wrapper .bx-pager.bx-default-pager a:focus{background-color: #ffe600;}
+        .bx-wrapper .bx-pager.bx-default-pager a{background-color: #ffffff;}
+        
+        .section_01{height: 230px; position: relative;}
+        .section_01>.sec_01{position: absolute;}
+        .section_01>.container{position: absolute; left: 50%;top: 50%; width: 1150px; margin: 0 auto;
+            transform: translate(-50%,-50%);}
+        .section_01>.container>.font{padding-left: 98px; margin-top: -45px;}
+        .section_01>.container>.font>p{font-size: 20px; color: #564e00; font-weight: bold;}
+        .section_01>.container>.font>p:nth-child(2){font-size: 40px; color: #0e347e;}
+        .circle{margin-left: 98px; margin-top: 30px; border-radius: 50%;
+             width: 35px; height: 35px; background-color: white; text-indent: -99999px;font-size:0;}
+        .circle::before{  content:'';   display: block;  width: 3px;height: 20px; background-color: black;
+            transform: translate(16px,8px);}  
+        .circle::after{content:'';display: block;   width: 20px;  height: 3px;background-color: black; 
+            transform: translate(7px,-3px);} 
+            
+        .section_02{padding-bottom: 10px;}    
+        .section_02>.sec_02>a>img{width: 100%; height: 605px; position: relative;}
+        .section_02>.container{position: absolute; left: 50%; top: 90%; transform: translate(-50%,170px);}
+        .section_02>.container>.font>p{font-size: 30px; font-weight: bold; color: black;padding-left: 98px;}
+        .section_02>.container>.font>p:nth-child(1){font-size: 50px; color: #6b4d30; margin-bottom: 71px;}
+        .circle{margin-left: 98px; margin-top: 30px; border-radius: 50%;
+             width: 35px; height: 35px; background-color: white; text-indent: -99999px;font-size:0;}
+        .circle::before{  content:'';   display: block;  width: 3px;height: 20px; background-color: black;
+            transform: translate(16px,8px);}  
+        .circle::after{content:'';display: block;   width: 20px;  height: 3px;background-color: black; 
+            transform: translate(7px,-3px);} 
+
+        .section_03{padding-bottom: 10px;}
+        .section_03>.sec03{display: flex; flex-flow: row nowrap; justify-content: start; position: relative;}
+        .section_03>.sec03>.font{position: absolute; left: 40%; top: 30%; transform: translate(-90%,-50%);}
+        .section_03>.sec03>.font:nth-child(2){left: 80%; top: 30%; transform: translate(-90%,-50%);}
+        .section_03>.sec03>.font>p{font-size: 30px; font-weight: bold; color: black;}
+        .section_03>.sec03>.font>p:nth-child(1){font-size: 50px; color: #93a03d;}
+        .section_03>.sec03>.font:nth-child(2)>p:nth-child(1){color: #f1ae1d;}
+        .section_03>.sec03>.font>.circle{margin-left: 0; }
+
+
+        .section_05>.sec05{display: flex; flex-flow: row nowrap; justify-content:flex-end; position: relative;}
+        .section_05>.sec05>.box>.box01{border: 1px solid #0e347e; width: 500px; height: 295px;}
+        .section_05>.sec05>.box>.box02{border: 1px solid #0e347e;  width: 500px; height: 295px;}
+        .section_05>.sec05>.box>.box02>img{width: 290px; height: 135px; float: right;}
+        .section_05 .box p{font-size:18px; font-weight: bold; color: black; line-height: 80px; margin-left: 30px;}
+        .section_05 .box p:nth-child(1){font-size: 45px; color: #0e347e;}
+        .section_05 .box01 p:nth-child(3){}
+        .section_05>.sec05 img{width: 1010px; height: 596px; position: relative;}
+        .section_05 .font {position: absolute; top: 20px; right: 250px; transform: translate(-50%,0); 
+            font-size: 30px; font-weight: bold; color: black;}
+        .section_05 .font p:nth-child(1){font-size: 50px;color:#b47c55;}
+        .section_05 .font .circle{margin-left: 0; margin-top: 70px;}
+
+        .section_07 .font{text-align: center; font-size: 18px; font-weight: 700; line-height:40px;margin-top: 20px;}
+        .section_07 .font p:nth-child(1){font-size: 24px;}
+
+        .section_07 .logo{text-align: center; margin: 5px;}
+        .section_07 .logo img{width: 30px; height: 30px;}
+        .section_07 .line{border-bottom: 2px solid darkgoldenrod; text-indent: -999999px;}
+        
+        
+        .footer .img img{width: 175px; height: 50px; margin-left: 50%; margin-top:80px;transform: translate(-50%,-50%);}
+        .footer .font{font-size: 14px; font-weight: 600; color: #737373; text-align: center; margin-top: 100px;
+            display: flex; flex-flow: column nowrap;  margin-top: 30px; margin-bottom: 50px;}
+        .footer .font ul{width: 566px;margin: 0 auto;display: flex; flex-flow: row nowrap; justify-content: space-around;}
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더 -->
+        <div class="header">
+            <div class="container">
+                <div class="header_sns">
+                    <p><a href="#">더본코리아</a></p>
+                    <p><a href="#">매장찾기</a></p>
+                    <a href="#"><img src="./imeages/index/insta.png" alt="인스타그렘"></a>
+                    <a href="#"><img src="./imeages/index/facebook.png" alt="페이스북"></a>
+                </div>
+                <div class="header_logo">
+                    <a href="#"><img src="./imeages/index/header_logo.png" alt="로고"></a>
+                    <p>빽다방</p>
+                </div>
+                <ul>
+                    <li>빽다방</li>
+                    <li>메뉴</li>
+                    <li>소식</li>
+                    <li>커뮤니티</li>
+                    <li>매장안내</li>
+                    <li>창업안내</li>
+                    <li>고객의소리</li>
+                </ul>      
+            </div>
+        </div>       
+        <!-- 섹션 -->
+        <div class="section_main_banner">
+            <div class="slider">
+                <div><a href="#"><img src="./imeages/index/main_banner01.jpg" alt="메인베너01"></a></div>
+                <div><a href="#"><img src="./imeages/index/main_banner02.jpg" alt="메인베너02"></a></div>
+                <div><a href="#"><img src="./imeages/index/main_banner03.jpg" alt="메인베너03"></a></div>
+                <div><a href="#"><img src="./imeages/index/main_banner04.jpg" alt="메인베너04"></a></div>
+                <div><a href="#"><img src="./imeages/index/main_banner05.jpg" alt="메인베너05"></a></div>
+                <div><a href="#"><img src="./imeages/index/main_banner06.jpg" alt="메인베너06"></a></div>
+            </div>
+        </div>
+        <div class="section_01">
+            <div class="sec_01">
+                <a href="#"><img src="./imeages/index/main_sec1.jpg" alt="sec01"></a>
+            </div>
+            <div class="container">
+                <div class="font">
+                    <p>The Finest Quality Coffee Plants</p>
+                    <p>PAIK’S COFFEE STORY</p>
+                    <p>균형잡힌 바디감으로 긴여운을 남기는 빽다방 커피를 만나보세요.</p>
+                </div>
+                <div class="circle">circle</div>
+            </div>   
+        </div>
+        <div class="section_02">
+            <div class="sec_02">
+                <a href="#"><img src="./imeages/index/main_sec2.jpg" alt="sec02"></a>
+            </div>
+            <div class="container">
+                <div class="font">
+                    <p>FRESH<br>COFFEE</p>   
+                    <p>신선한 뉴크롭 원두를 사용하여<br>추출한 커피메뉴!</p>  
+                </div>
+                <div class="circle">circle</div>
+            </div>
+        </div>
+        <div class="section_03">
+            <div class="sec03">
+                <img src="./imeages/index/main_sec3.jpg" alt="see03">
+                <div class="font">
+                    <p>VARIOUS<br>BEVERAGE</p>
+                    <p>에이드, 티, 주스 등 취향대로<br>골라 먹는 즐거움!</p>
+                    <div class="circle">circle</div>
+                </div> 
+                <img src="./imeages/index/main_sec4.jpg" alt="sec04">
+                <div class="font">
+                    <p>SWEET<br>PAIK'S CCINO</p>
+                    <p>달콤 시원한 빽다방<br>시그니처 메뉴!</p>
+                    <div class="circle">circle</div>
+                </div>                    
+            </div>
+        </div>
+        <div class="section_05">
+            <div class="sec05">
+                <div class="box">
+                    <div class="box01">
+                        <p>Store</p>
+                        <p>원하시는 지역의 매장을 검색해보세요!</p>
+                        <p><input type="text  name=" size="30" value="검색하세요" style="border:1px solid #666666;"></p>
+                    </div>
+                    <div class="box02">
+                        <p>FRANCHISE</p>
+                        <p>빽다방 창업안내를  도와드리겠습니다 </p>
+                        <img src="./imeages/index/FRAINCHISE.png" alt="프렌차이즈">
+                    </div>
+                </div>
+                <div>
+                    <img src="/imeages/index/mmain_sec5.jpg" alt="sec05">
+                    <div class="font">
+                        <p>TASTY ICE CREAM /<br>DESSERT</p>
+                        <p>달콤한 아이스크림부터<br>든든한 브레드 까지!</p>
+                        <div class="circle">circle</div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="section_07">
+            <div class="sec07">
+                <div class="font">
+                    <p>PAIK’S COFFEE SNS</p>
+                    <p>#빽다방 #빽다방신메뉴 #빽다방이벤트</p>
+                </div>
+                <div class="logo">
+                    <a href="#"><img src="./imeages/index/insta.png" alt="인스타그렘"></a>
+                    <a href="#"><img src="./imeages/index/facebook.png" alt="페이스북"></a>
+                </div>
+                <div class="line">
+                    <p>라인</p>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터 -->
+        <div class="footer">
+            <div class="img">
+                <a href="#"><img src="./imeages/index/footer_logo.png" alt="푸터"></a>
+            </div>
+            <div class="font">
+                <ul>
+                    <li><p>(주)더본코리아</p></li>
+                    <li><p>사업자등록번호 211-86-00870</p></li>
+                    <li><p>대표이사 백종원</p></li>
+                </ul>
+                <ul>
+                    <li><p>주소: 서울시 강남구 봉은사로 1길 39 유성빌딩 5~6층</p></li>
+                    <li><p>팩스: 02-511-3864</p></li>
+                </ul>
+                <ul>
+                    <li><p>본사 대표전화: 02-549-3864</p></li>
+                    <li><p>가맹상담전화: 02-3447-0410</p></li>
+                    <li><p>고객센터: 1544-2360</p></li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
+                    </li>
+                </ul>               
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+  </script>
+</html>
